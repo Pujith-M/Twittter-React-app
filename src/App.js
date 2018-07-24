@@ -1,15 +1,23 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import Navbar from './Application/Navbar'
 import 'bulma/css/bulma.css'
 import './App.css';
 
 class App extends Component {
+		constructor(props){
+				super(props);
+				this.state = {
+						isUserSignedIn: true,
+				}
+		}
 		render() {
-
-
 				return (
-						<Navbar/>
+						<div>
+								<Navbar
+										isUserSignedIn={this.state.isUserSignedIn}
+								/>
+						</div>
+
 				);
 		}
 }

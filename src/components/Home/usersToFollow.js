@@ -1,5 +1,5 @@
 import React from 'react';
-import {USERS} from "../constants";
+import {USERS} from "../../constants";
 
 
 const renderUser = (user) => {
@@ -25,7 +25,7 @@ const renderUsers = USERS.map((user) =>
 );
 const userToFollow = () => {
   return (
-    <div className="column">
+    <div className="column is-hidden-mobile">
       <div className="panel-heading has-background-grey-lighter">
         <b className="is-4">Suggestions for you</b>
       </div>

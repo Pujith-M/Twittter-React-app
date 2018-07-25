@@ -19,20 +19,20 @@ const renderUserInfo = (user) => {
     <div className="panel-block level">
       <div className="level-item has-centered-text">
         <div>
-          <p className="heading is-size-7">Tweeets</p>
-          <p className="title is-6">{user.tweeets.length}</p>
+          <div className="heading is-size-7">Tweeets</div>
+          <div className="title is-6">{user.tweeets.length}</div>
         </div>
       </div>
       <div className="level-item has-centered-text">
         <div>
-          <p className="heading is-size-7">Following</p>
-          <p className="title is-6">7</p>
+          <div className="heading is-size-7">Following</div>
+          <div className="title is-6">7</div>
         </div>
       </div>
       <div className="level-item has-centered-text">
         <div>
-          <p className="heading is-size-7">Followers</p>
-          <p className="title is-6">7</p>
+          <div className="heading is-size-7">Followers</div>
+          <div className="title is-6">7</div>
         </div>
       </div>
     </div>

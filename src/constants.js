@@ -1,8 +1,8 @@
 import React from 'react';
 
 const USER = {
-  name: "Jhon Smith",
-  username: "#jhon-smith",
+  name: "John Smith",
+  username: "#john-smith",
   image: "https://www.w3schools.com/howto/img_avatar.png",
   tweeets: [
     "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"

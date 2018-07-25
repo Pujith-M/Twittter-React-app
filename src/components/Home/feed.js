@@ -1,5 +1,5 @@
 import React from 'react';
-import {TWEEETS} from "../constants";
+import {TWEEETS} from "../../constants";
 
 const renderTweeets = TWEEETS.map((currentTweet) =>
   <div className="box">
@@ -24,7 +24,7 @@ const renderTweeets = TWEEETS.map((currentTweet) =>
 const tweetForm = (user) => {
   return (
     <article className="media box">
-      <figure className="media-left">
+      <figure className="media-left is-hidden-mobile">
         <img style={{borderRadius: '50%'}} src={user.image} alt="" className="image is-64x64"/>
       </figure>
       <div className="media-content">

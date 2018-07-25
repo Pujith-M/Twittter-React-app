@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import 'bulma/css/bulma.css'
-import props from "../App";
 
 const navTitle = () => {
 		return (
 				<div className="navbar-brand">
 						<div className="navbar-start">
-								<div className="navbar-item" ref="#">
-										<p className=" is-size-3 has-text-grey-dark">{"Twittter"}</p>
+              <div className="navbar-item is-paddingless" ref="#">
+                <a className="has-text-grey-dark is-size-4 has-background-info navbar-item" href={"#"}>Twittter</a>
 								</div>
 						</div>
 						<div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -21,29 +19,19 @@ const navTitle = () => {
 
 const navItemsIfUserSignedIn = () => {
 		return (
-				<div id="navbarExampleTransparentExample" className="navbar-menu">
-						<a className="control has-text-grey-dark" href={"#"}>
-								<pre className={"is-size-5 has-text-grey-dark has-background-info"}>NewTweeet</pre>
-						</a>
-						<a className="control has-text-grey-dark" href={"#"}>
-								<pre className={"is-size-5 has-text-grey-dark has-background-info"}>Profile</pre>
-						</a>
-						<a className="control has-text-grey-dark" href={"#"}>
-								<pre className={"is-size-5 has-text-grey-dark has-background-info"}>Log-out</pre>
-						</a>
+      <div id="navbarExampleTransparentExample" className="navbar-menu is-paddingless">
+        <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>NewTweeet</a>
+        <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>Profile</a>
+        <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>Log-out</a>
 				</div>
 		);
 };
 
 const navItemsIfUserSignedOut = () => {
 		return (
-				<div id="navbarExampleTransparentExample" className="navbar-menu">
-						<a className="control has-text-grey-dark" href={"#"}>
-								<pre className={"is-size-5 has-text-grey-dark has-background-info"}>Sign-in</pre>
-						</a>
-						<a className="control has-text-grey-dark" href={"#"}>
-								<pre className={"is-size-5 has-text-grey-dark has-background-info"}>Sign-up</pre>
-						</a>
+      <div id="navbarExampleTransparentExample" className="navbar-menu is-paddingless">
+        <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>Sign-in</a>
+        <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>Sign-up</a>
 				</div>
 		);
 };
@@ -52,7 +40,7 @@ const NavBarItems = (props) => {
 		const navItems = props.isUserSignedIn ? navItemsIfUserSignedIn : navItemsIfUserSignedOut;
 		return (
 				<div className="navbar-end">
-						<div className="navbar-item ">
+          <div className="navbar-item is-paddingless">
 								{navItems()}
 						</div>
 				</div>
@@ -61,9 +49,7 @@ const NavBarItems = (props) => {
 };
 
 class Navbar extends Component {
-
 		render() {
-
 				document.addEventListener('DOMContentLoaded', () => {
 						const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 						if ($navbarBurgers.length > 0) {
@@ -78,12 +64,16 @@ class Navbar extends Component {
 						}
 				});
 
-				return <nav className="navbar is-info is-fixed-top">
-						<div className="navbar-item">
-								{navTitle()}
-						</div>
-						{NavBarItems(this.props)}
-				</nav>;
+      return (
+        <div>
+          <nav className="navbar is-info">
+            <div className="navbar-item is-paddingless">
+              {navTitle()}
+            </div>
+            {NavBarItems(this.props)}
+          </nav>
+        </div>
+      );
 		}
 }
 

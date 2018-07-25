@@ -103,7 +103,7 @@ function checkValidServiceWorker(swUrl) {
     })
     .catch(() => {
       console.log(
-        'No internet connection found. Navbar is running in offline mode.'
+        'No internet connection found. userToFollow is running in offline mode.'
       );
     });
 }

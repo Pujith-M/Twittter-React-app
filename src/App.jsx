@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Navbar from './Navbar'
+import Navbar from './components/Navbar'
 import Home from './components/Home/home'
 import {USER} from './constants'
 
@@ -18,11 +18,22 @@ class App extends Component {
       isUserSignedIn: false,
     });
   };
+
   handleSignIn = () => {
     this.setState({
       isUserSignedIn: true,
     });
   };
+
+  renderHome = () =>{
+    if (this.state.isUserSignedIn) {
+      return(<Home
+          user={this.state.user}
+        />
+        );
+    }
+  };
+
   render() {
     return (
       <div>
@@ -30,10 +41,9 @@ class App extends Component {
           isUserSignedIn={this.state.isUserSignedIn}
           handleLogOut={this.handleLogOut}
           handleSignIn={this.handleSignIn}
+          userName={this.state.user.name}
         />
-        <Home
-          user={this.state.user}
-        />
+        {this.renderHome()}
       </div>
     );
   }

@@ -5,7 +5,7 @@ const navTitle = () => {
     <div className="navbar-brand">
       <div className="navbar-start">
         <div className="navbar-item is-paddingless" ref="#">
-          <a className="has-text-grey-dark is-size-4 has-background-info navbar-item" href={"#"}>Twittter</a>
+          <a className="has-text-grey-dark is-size-4 has-background-info navbar-item"   >Twittter</a>
         </div>
       </div>
       <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -20,9 +20,9 @@ const navTitle = () => {
 const navItemsIfUserSignedIn = (props) => {
   return (
     <div id="navbarExampleTransparentExample" className="navbar-menu is-paddingless">
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>NewTweeet</a>
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"}>Profile</a>
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"} onClick={props.handleLogOut}>Log-out</a>
+      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item">NewTweeet</a>
+      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item">{props.userName}</a>
+      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" onClick={props.handleLogOut}>Log-out</a>
     </div>
   );
 };
@@ -30,8 +30,8 @@ const navItemsIfUserSignedIn = (props) => {
 const navItemsIfUserSignedOut = (props) => {
   return (
     <div id="navbarExampleTransparentExample" className="navbar-menu is-paddingless">
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"} onClick={props.handleSignIn}>Sign-in</a>
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" href={"#"} onClick={props.handleSignIn}>Sign-up</a>
+      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" onClick={props.handleSignIn}>Sign-in</a>
+      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" onClick={props.handleSignIn}>Sign-up</a>
     </div>
   );
 };

@@ -1,6 +1,4 @@
 import React from 'react';
-import {USERS} from "../../constants";
-
 
 const renderUser = (user) => {
   return (
@@ -10,7 +8,7 @@ const renderUser = (user) => {
           <img style={{borderRadius: '50%'}} className="image is-32x32" src={user.image} alt=""/>
         </a>
       </p>
-      <p className="level-item ">
+      <p className="level-item is-hidden-tablet-only">
         <strong>{user.name}</strong>
       </p>
       <p className="level-item ">
@@ -20,16 +18,14 @@ const renderUser = (user) => {
   );
 };
 
-const renderUsers = USERS.map((user) =>
-  <div className="panel-heading">{renderUser(user)}</div>
-);
-const userToFollow = () => {
+
+const userToFollow = (props) => {
   return (
     <div className="column is-hidden-mobile">
       <div className="panel-heading has-background-grey-lighter">
         <b className="is-4">Suggestions for you</b>
       </div>
-      {renderUsers}
+      {props.users.map((user, index) => <div key={index} className="panel-heading">{renderUser(user)}</div>)}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import GoogleLogin from 'react-google-login';
 
 const navTitle = () => {
   return (
@@ -30,9 +31,15 @@ const navItemsIfUserSignedIn = (props) => {
 const navItemsIfUserSignedOut = (props) => {
   return (
     <div id="navbarExampleTransparentExample" className="navbar-menu is-paddingless">
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" onClick={props.handleSignIn}>Sign-in</a>
-      <a className="has-text-grey-dark is-size-5 has-background-info navbar-item" onClick={props.handleSignIn}>Sign-up</a>
+      <GoogleLogin
+        clientId="419074857015-9epss9161rheim0dn333585b571caa9p.apps.googleusercontent.com"
+        className={"has-text-grey-dark is-size-5 has-background-info navbar-item"}
+        buttonText="Login"
+        onSuccess={props.handleSignIn}
+        onFailure={props.handleLogOut}
+      />
     </div>
+
   );
 };
 

@@ -8,8 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isUserSignedIn: true,
-      user: USER,
+      isUserSignedIn: false,
+      user: "",
     };
   }
 
@@ -19,9 +19,16 @@ class App extends Component {
     });
   };
 
-  handleSignIn = () => {
+  handleSignIn = (googleUserInfo) => {
+    const user = {
+      name: googleUserInfo.profileObj.name,
+      image: googleUserInfo.profileObj.imageUrl,
+      userName:'#' + googleUserInfo.profileObj.name,
+      tweeets: [],
+    };
     this.setState({
       isUserSignedIn: true,
+      user:user
     });
   };
 

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Navbar from './components/Navbar'
 import Home from './components/Home/home'
-import {USER} from './constants'
 
 class App extends Component {
 
@@ -39,6 +38,7 @@ class App extends Component {
         />
         );
     }
+    return(<h1 className="title is-1 has-text-centered" style={{ marginTop:'30%'} }>Welcome to Twittter</h1>)
   };
 
   render() {

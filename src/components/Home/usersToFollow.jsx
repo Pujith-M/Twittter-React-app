@@ -12,7 +12,7 @@ const renderUser = (user) => {
         <strong>{user.name}</strong>
       </p>
       <p className="level-item ">
-        <a className="button is-info">Follow</a>
+        {/*<a className="button is-info">Follow</a>*/}
       </p>
     </nav>
   );

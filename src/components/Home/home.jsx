@@ -8,10 +8,13 @@ import {TWEEETS, USERS} from "../../constants";
 class Home extends Component {
   constructor(props){
     super(props);
+    let users = USERS.slice();
+    const newUser = this.props.user;
+    users.push(newUser);
     this.state = {
-      users:USERS,
+      users:users,
       tweeets:TWEEETS,
-    }
+    };
   }
 
   newTweeetHandler = (tweet) => {

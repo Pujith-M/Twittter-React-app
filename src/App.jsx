@@ -1,50 +1,71 @@
 import React, {Component} from 'react';
-import Navbar from './components/Navbar'
+import Navbar from './components/Home/navbar'
 import Home from './components/Home/home'
-import {USER} from './constants'
+import {USER} from "./constants";
 
 class App extends Component {
+
+  handleLogOut = () => {
+    this.setState({
+      isUserLoggedIn: false,
+    });
+  };
+
+  handleLogIn = (googleUserInfo) => {
+    const user = {
+      name: googleUserInfo.profileObj.name,
+      image: googleUserInfo.profileObj.imageUrl,
+      userName: '#' + googleUserInfo.profileObj.name,
+      tweeets: [],
+    };
+    this.setState({
+      isUserLoggedIn: true,
+      user: user
+    });
+  };
 
   constructor(props) {
     super(props);
     this.state = {
-      isUserSignedIn: true,
+      isUserLoggedIn: false,
       user: USER,
     };
   }
-
-  handleLogOut = () => {
-    this.setState({
-      isUserSignedIn: false,
-    });
-  };
-
-  handleSignIn = () => {
-    this.setState({
-      isUserSignedIn: true,
-    });
-  };
-
-  renderHome = () =>{
-    if (this.state.isUserSignedIn) {
-      return(<Home
-          user={this.state.user}
-        />
-        );
-    }
-  };
 
   render() {
     return (
       <div>
         <Navbar
-          isUserSignedIn={this.state.isUserSignedIn}
+          isUserLoggedIn={this.state.isUserLoggedIn}
           handleLogOut={this.handleLogOut}
-          handleSignIn={this.handleSignIn}
+          handleLogIn={this.handleLogIn}
           userName={this.state.user.name}
         />
-        {this.renderHome()}
+        <HomePage
+          isUserLoggedIn={this.state.isUserLoggedIn}
+          user={this.state.user}
+        />
       </div>
+    );
+  }
+}
+
+class HomePage extends Component {
+  render() {
+    if (this.props.isUserLoggedIn) {
+      return (
+        <Home
+          user={this.props.user}
+        />
+      );
+    }
+    return (
+      <h1
+        className="title is-1 has-text-centered"
+        style={{marginTop: '30%'}}
+      >
+        Welcome to Twittter
+      </h1>
     );
   }
 }

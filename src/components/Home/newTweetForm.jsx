@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 
 class NewTweetForm extends Component {
-  handleNewTweetChange = (newTweet) => {
+
+  handleNewTweetBoxChange = (newTweet) => {
     this.setState({newTweet: newTweet.target.value});
-    console.log(newTweet.target.value)
   };
+
   createNewTweet = () => {
     if (this.state.newTweet.length) {
       this.props.newTweeetHandler(this.state.newTweet);
@@ -34,7 +35,7 @@ class NewTweetForm extends Component {
             placeholder="Tweeet about it!"
             required="true"
             value={this.state.newTweet}
-            onChange={this.handleNewTweetChange}
+            onChange={this.handleNewTweetBoxChange}
           />
           <button
             style={{marginTop: '10px'}}

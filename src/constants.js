@@ -70,46 +70,51 @@ const USER7 = {
   ]
 };
 
+const TWEET = {
+  tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
+  user: USER
+};
 
+const TWEET1 = {
+  tweet: "Congress leaders feel I cant see them in the eye. They are correct. I am too small compared to them. \n" +
+  "How did 1 family treat Netaji Bose, Sardar Patel, Loknayak JP, Morarjibhai Desai, Charan Singh Ji, Chandra Shekhar Ji, Pranab Da, Deve Gowda Ji & Sharad Pawar Ji? Everyone knows.",
+  user: USER7
+};
+
+const TWEET2 = {
+  tweet: "Android P is almost here! As we put the finishing touches on the new platform, today we’re bringing you Android P Beta 4, the last preview milestone before launch official this summer. Get your apps ready!",
+  user: USER1
+};
+
+const TWEET3 = {
+  tweet: "On #KargilVijayDiwas, a grateful nation pays homage to all those who served the nation during Operation Vijay. Our brave soldiers ensured that India remains protected and gave a befitting answer to those who tried to vitiate the atmosphere of peace.",
+  user: USER2
+};
+
+const TWEET4 = {
+  tweet: "“I’ve been on antidepressants since August of last year.  I was living alone in the city at the time and feeling a lot of anxiety.  So I talked to a therapist, and she recommended antidepressants.  At first I was nervous about taking them.  There’s a bit of a stigma in the.. \"This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
+  user: USER3
+};
+
+const TWEET5 = {
+  tweet: "Ever wonder which games top the charts for Google Play? Well, the results are in, and the outcome may (not) surprise you. These were June’s top new downloaded games on the Play Store.",
+  user: USER4
+};
+
+const TWEET6 = {
+  tweet: "Hello mr @directorprems 1st intro song Sudeep avru du One #million subscribers ero  @anand_audio bitte Okey....\n" +
+  "2nd song #Shivanna avru ninna Tukkali #300subscriber ero youtube Channel li Bittidyala ninge yavdralli Hodibeku  😠😠 #Gimik_prem 🤖",
+  user: USER5
+};
+
+const TWEET7 = {
+  tweet: "“Having this easy-to-open packaging doesn’t just benefit us in the disabled community. It benefits everybody to have a package that opens a lot faster, with less hassle, so you can game faster.” #accessibility #inclusivedesign",
+  user: USER6
+};
 
 const USERS = [USER, USER1, USER2, USER3, USER4, USER5, USER6, USER7,];
 
-let TWEEETS = [
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "Android P is almost here! As we put the finishing touches on the new platform, today we’re bringing you Android P Beta 4, the last preview milestone before launch official this summer. Get your apps ready!",
-    user: USER1
-  },
-  {
-    tweet: "On #KargilVijayDiwas, a grateful nation pays homage to all those who served the nation during Operation Vijay. Our brave soldiers ensured that India remains protected and gave a befitting answer to those who tried to vitiate the atmosphere of peace.",
-    user: USER2
-  },
-  {
-    tweet: "“I’ve been on antidepressants since August of last year.  I was living alone in the city at the time and feeling a lot of anxiety.  So I talked to a therapist, and she recommended antidepressants.  At first I was nervous about taking them.  There’s a bit of a stigma in the.. \"This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER3
-  },
-  {
-    tweet: "Ever wonder which games top the charts for Google Play? Well, the results are in, and the outcome may (not) surprise you. These were June’s top new downloaded games on the Play Store.",
-    user: USER4
-  },
-  {
-    tweet: "Hello mr @directorprems 1st intro song Sudeep avru du One #million subscribers ero  @anand_audio bitte Okey....\n" +
-    "2nd song #Shivanna avru ninna Tukkali #300subscriber ero youtube Channel li Bittidyala ninge yavdralli Hodibeku  😠😠 #Gimik_prem 🤖",
-    user: USER5
-  },
-  {
-    tweet: "“Having this easy-to-open packaging doesn’t just benefit us in the disabled community. It benefits everybody to have a package that opens a lot faster, with less hassle, so you can game faster.” #accessibility #inclusivedesign",
-    user: USER6
-  },
-  {
-    tweet: "Congress leaders feel I cant see them in the eye. They are correct. I am too small compared to them. \n" +
-    "How did 1 family treat Netaji Bose, Sardar Patel, Loknayak JP, Morarjibhai Desai, Charan Singh Ji, Chandra Shekhar Ji, Pranab Da, Deve Gowda Ji & Sharad Pawar Ji? Everyone knows.",
-    user: USER7
-  }
-];
+const TWEEETS = [TWEET, TWEET1, TWEET2, TWEET3, TWEET4, TWEET5, TWEET6, TWEET7];
 
 
 export {TWEEETS, USER, USERS};

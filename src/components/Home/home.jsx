@@ -1,18 +1,10 @@
 import React, {Component} from 'react';
 import Profile from './profile.jsx'
-import Feed from './feed.jsx'
+import Feeds from './feeds.jsx'
 import UserToFollow from './usersToFollow.jsx'
 import {TWEEETS, USERS} from "../../constants";
 
-
 class Home extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      users:USERS,
-      tweeets:TWEEETS,
-    }
-  }
 
   newTweeetHandler = (tweet) => {
     let tweeets = this.state.tweeets.slice();
@@ -25,6 +17,17 @@ class Home extends Component {
     this.setState({tweeets: tweeets});
   };
 
+  constructor(props) {
+    super(props);
+    let users = USERS.slice();
+    const newUser = this.props.user;
+    users.push(newUser);
+    this.state = {
+      users: users,
+      tweeets: TWEEETS,
+    };
+  }
+
   render() {
     return (
       <section className="section">
@@ -32,7 +35,7 @@ class Home extends Component {
           <Profile
             user={this.props.user}
           />
-          <Feed
+          <Feeds
             user={this.props.user}
             tweeets={this.state.tweeets}
             newTweeetHandler={this.newTweeetHandler}

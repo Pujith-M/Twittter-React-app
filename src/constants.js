@@ -1,5 +1,3 @@
-import React from 'react';
-
 const USER = {
   name: "John Smith",
   username: "#john-smith",
@@ -9,43 +7,114 @@ const USER = {
   ]
 };
 
+const USER1 = {
+  name: "Example User",
+  username: "#john-smith",
+  image: "https://www.w3schools.com/howto/img_avatar.png",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
 
+const USER2 = {
+  name: "Robert Downey",
+  username: "#john-smith",
+  image: "data:image/jpeg;base64,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",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
 
-const USERS = [USER, USER, USER, USER, USER, USER, USER, USER,]
+const USER3 = {
+  name: "Tom Cruise",
+  username: "#john-smith",
+  image: "data:image/jpeg;base64,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",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
 
-const TWEEETS = [
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  },
-  {
-    tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
-    user: USER
-  }
-];
+const USER4 = {
+  name: "Barack Obama",
+  username: "#john-smith",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSzRqiy9IlVxV88iCSxnMcKVspmnRR4El7GlGsdgFAmTBQJ01UQ9Z4Zv6geVBpaBLCklo",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
+
+const USER5 = {
+  name: "Narendra Modi",
+  username: "#john-smith",
+  image: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALoAiwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAAEDBAUGBwj/xAA5EAABAwIEBAMFBgUFAAAAAAABAAIDBBEFEiExBhNBUSJhcQcUMpGhQoGxweHwIyRS0fEzQ2Jygv/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgQDBf/EACMRAAICAQQCAwEBAAAAAAAAAAABAhEDBBIhMQVRE0FhcSL/2gAMAwEAAhEDEQA/APV0SAbIgkAQTpk6AEnTLOxHEm07jFCbydT0b+qQGhJI2NuZ7gAqz69g+BpesM1LXHNIeY49d0z6wMaS63/oEaK0kuw5+jb9+dfWK3mp4qpkmjhb1XONxFpHhFnDW173SbiZYT/DJClyj7K2S9HVDUXCSyaPE4pbAuLSehWo1wIRwJqgkkkkCEUin6JkACQlZEmSAhaiCjapFQBJJgnG6QFTFKv3OkdIPjPhYPNcbU4g5pIb43k733WpxfWASxwXsGjMfX9hczC4OJdawuuWTJtR3w4975NOlM8o3AKusp5HDLq4elkOGhhAddaQLRayzqUpds2bYx4SKgpHAeFtlHLE5tw4rUaQQq9RYgi17olFewUnZmZiHAkDe66LCasywkXuR5rAmZyySRsFZwaXlhz833K9PP8A1TOOogttnVtIIBTqtRycxpPTorK1PsxCSSTIASVkkkgKsLs7Gu7gFSrPwSXnYTRyf1RN/BaHREXcUypx2zcfQQThCESok4HjZ9sUmFj/AKLLHos6hbzdBstfj2WCQO5JzTRWZKA06bEfT8VhU2MR0jBEyHmPLd221Pks2WG9mvBPZHo6TDocrQCbK9yy0XFiLd1xR4mfBlaKci17/wAUE/I2WthWNvrX8prDmLSSwa2HnbZcnBR/TRGTl2dG1jcu4QOEdyGvBcegXEYnxPUwAxtMdmkgnna9thqq+H8VZm3dXxAjvFJYepGn5K4xi1yc5uSfB12IZ2s3FrKnhc7hI9hIyhmbU2A1UEGLNxGEnwOffR0Trg/epMKpmyVr21UbXNMZJj3aR+aiC25OB5OcTs7TCZmysytI0HRaC87w+Od+P0opppI6YSNc1jXbj/l30C9FK0wyb7/DJlxfHXPYySSSs5CSSSQBzfBsvN4fgB3YXN+RK3xsuS4AlzYZPH/RNf5hdYNlz00rwx/hr18Nupmv0IJ0wThdjIcJxvEIMVMrRYT0ozebg8C/ray4SowGqqpi4PkLc18rTo5eo8d0+bCxUgXdEcp9CQfyXL0bGSxxmQBum7TZY8txkehgSnE55nCvutG4SQZQ43LnO8Q9OwXScE4bHRTudGwsMjdfTp+KnqHUVOAxtua/Zx1IUuGYvRU7pAJWyEH7JBKhS55O/wAaS4RBjPDcNVLLPFG12d2ZwtsVWpOGqdhNzBmePFezSfXqtabiTC3VPu/P5cjxoPP8kVPj0Ak5NdGGu3Y8tHjCbq+xKMn9FKDBIKaUvja1jQLeDY+qsU7Dz6lrRb+XdYg2/fVaNRWU74/Ba3kq2C5Za2d7j4eWWpx5lwc8tqDtEXCVM73umjeTmjJJP9QaP1Xdrn+GqS1RPVkEnIIweg6kfQLoF2wR2xMupnumJJJJdjOJJJJAHAez6S1RWw9MrXfiF3DV53wPJy8eezo+F30IXobSsmhd4Uep5eO3VP8AQwiQp7rYeWUOIYPecHqYiNCz8wvMH1ElOXRkXto0dyvWaqPm08kdvjaQvP6uhjdM2YNzFrg4t7EFcMsNxp0+XYyvTYTHNDJLWSEyPHwDoOyyJOHMMgny+9GGci5IdYXvtum4wpMQeY34fWvip8t3Fn2ye/yWThtBO4lrqhrX2sbsvf6qFGKXBoTyTds7DCaTAqSGN8ksTnNdfNJoSe581ZxKuwOuMdOamAvdbI1rrO/yufZhgaCamtkIG+QBgKem4WpZ5hK6Nzrm7Xl5vv0T49BKElzuNeLDaiGaNrJS+B4JDiNR6/vqukpYRDTusdXAXsnp4uW2KJ4Phba5KgxOvgoaKermackALjbr+9FePGou0Z8uaU1TZ1dNCyCFsbBYAXPmVKs3h3FosbwWmxCGw5jPG0G+R40I+4rRuutUZrsdN1SukgB7pXQp0AeWcMv5XEVJ2eS35heksdcBeTGeSkmjqYQDJEczQdiVKPaPjDGh8mFQlh2dleAV5vjZr42v093zmN/LGS9HrIKe47heUs9p1ducIh9RI4fkp2e1Cot4sGHqJz/ZeimeHTPTwVy/EOHS08xq6c5oJD/Ebb4CevoucPtUEbCX4Sc/RoqP0XG45xrjmNTES1b6enP+xTOLG287au+9DBOj0Snp2YhAJY2A5ScrTtfXT0UEOExumjnmgZ4HCxA39VymA8Y+7lsU4yE6EA2B9F2NFjcFXpG8XyFoaTbUj/ChpHWM2lRbbhdHzheIG5u64Guv6FatNSMhkIe0BrfhAGg/dliy4xSBznc5rTFo4OOvdUa7i+njpJJvFkv8bv7fRNUEps28WroKa8jpGsY0amy8u4q4gqMRqTSwuLKSM3IB1efPyAVHFuIKvFJnhrnMhuQNdSFntbrqbrolycWztPZ1xXFgE09LiBcKGezw5ovy5Bpe3Yjf0C9WoMawvEbChxGmndb4GSDML927hfPjG6+isMyhwcNHDUEK9pNn0DiWIU2GUj6qsk5cTNza/wAly9T7RcIYQIWzzjrlbay85GM4o6gdQvrZJqV32JnZrel9R9yzXRzB2ZhbftlXHIprroTZ9CU08dVTxzwuDmPaHBwN73Uq8TwbjTFMHEcFmvp2kXicNh2B6LvofaFgL4mufPJG4jVjmEkJRkvsaZxMwu036KjWYrJS4NRwwYvI6WOF0Jo2guZkLnfEdtBaw3WXieL1GI1Ej7Ngje4nlR3sPv6rMOn6LFpvHuDubPZ8h5OOopQXRcgxWtpsPioopi2KMPFrAlwfuDfcKi55dbMSbCwv0REaKMnVeioRj0eQ22M7yUezrlSoXNum0IrysuLqWhq6uCRrYi5+ZwDW31v0QuuN9lNQCndVwuqhI6mbI0zNjNnFoIuBfrZTVlWW63Ea2CYxuo5KeS5a8ztcCSN9+v6KlJNUVF+bK4g2GW+mi6XjfHY+JMUiqaSGWKCKERNZKRcG57LnxE4akgIUQbFFGAFIX7AfNNbUhtyR1J0U8UGuZ2pXREMdoIAAG/dWYo7DXdMGhPsrQgwLJ81tUAvbdAT4rJiLPgkaGvAIUL8PgLjaR7fK+ya+TVSiQkXupcIvtAZXRDq42ScdE8YUlDvGirH4lbk2VU/EgYQCF2iNqJ0d2oAANzhHG18MeZkYdfqdQgbdpIWk0ZWgdghICi0SE5soaD010U7WF26nIHRO0AKqJsFkeXojGiLomQhBAIgEmpFMAHFJg3Q7lSNFkARyk2TA6dU8ifboUMZlxnMpmqvC7RWAoKGfsoSNVM46KNACAUsZ7oAEQaRqgQntvK23dWHv1so4G552N01UtZD7vdznXa3wkgHQpgJrlIFXj8QBGo8wrDRomIMBOLIRe+6JAh9kJKM9kBTAYalENCmaEigBn6jZUJq3LK5oabA22UtZUCKMkbhRwACJuexdbU3UlIpwOu0eatDUKhTnwt9FcY7RShsMhMkTonbqqEEApOqEDVEEAMxgeXAkgDspH53EcyZ8lhpm6JoftHuURKYMTT06KVpUOiNrrbIESuIGUHQk2CTTcAjY6hT0ccT6XEKh8bXOjiZHEXC+V7nbjzytd81Tgu2JrXEaC2iAomukgL0L5bDp807AlJFt1DLJbqqj53l2oAH/AGCill7FS2OiOofzZmR9C7VWtOgKpUlnVL3O2aFpXA+yUkMx4tlaYVUicS45hYqyOiSGTAo2KNqlaqESNT3smCZ+gQIKK3LG+pTghWIKYPo2va6+tiAL29VTBOcgA2B33TqhIlBCJtuqABOEDLbKiNuGvga7+I+pzuHZrW2H1d9FXzX/AGEOXVJIBy7bRQyPJOxt6I3OACgdlOyBgu16aeir1Dg0HopnWHVUa2TwEqWMloXWa95+0UZkcSTqgpB/LtHUq0IwBYgpAZsOXO4NdmVpuyzMP6+i0W7JoCxGbqZqrxqwxUIkCaU+EpD4wlPs31QIT2Nud/QOIBTttbQJSbpmfD96AolCVk42TdUAEmcRZOEL0AVpb3KiB1RTfF8kDkhjvFwsuvd4LBaR2+ay65SxmlhxiliaWk3sreRvb6rIwX81uhNdCP/Z",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
+
+const USER6 = {
+  name: "Abraham Lincoln",
+  username: "#john-smith",
+  image: "https://www.w3schools.com/howto/img_avatar.png",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
+
+const USER7 = {
+  name: "Donald Trump",
+  username: "#john-smith",
+  image: "https://www.w3schools.com/howto/img_avatar.png",
+  tweeets: [
+    "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1", "My tweet 1"
+  ]
+};
+
+const TWEET = {
+  tweet: "This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
+  user: USER
+};
+
+const TWEET1 = {
+  tweet: "Congress leaders feel I cant see them in the eye. They are correct. I am too small compared to them. \n" +
+  "How did 1 family treat Netaji Bose, Sardar Patel, Loknayak JP, Morarjibhai Desai, Charan Singh Ji, Chandra Shekhar Ji, Pranab Da, Deve Gowda Ji & Sharad Pawar Ji? Everyone knows.",
+  user: USER7
+};
+
+const TWEET2 = {
+  tweet: "Android P is almost here! As we put the finishing touches on the new platform, today we’re bringing you Android P Beta 4, the last preview milestone before launch official this summer. Get your apps ready!",
+  user: USER1
+};
+
+const TWEET3 = {
+  tweet: "On #KargilVijayDiwas, a grateful nation pays homage to all those who served the nation during Operation Vijay. Our brave soldiers ensured that India remains protected and gave a befitting answer to those who tried to vitiate the atmosphere of peace.",
+  user: USER2
+};
+
+const TWEET4 = {
+  tweet: "“I’ve been on antidepressants since August of last year.  I was living alone in the city at the time and feeling a lot of anxiety.  So I talked to a therapist, and she recommended antidepressants.  At first I was nervous about taking them.  There’s a bit of a stigma in the.. \"This move will result in withdrawal of 41% of total cases by CBDT & 18% of total cases by CBIC. This is in line with our Government’s belief of trusting our citizens.",
+  user: USER3
+};
+
+const TWEET5 = {
+  tweet: "Ever wonder which games top the charts for Google Play? Well, the results are in, and the outcome may (not) surprise you. These were June’s top new downloaded games on the Play Store.",
+  user: USER4
+};
+
+const TWEET6 = {
+  tweet: "Hello mr @directorprems 1st intro song Sudeep avru du One #million subscribers ero  @anand_audio bitte Okey....\n" +
+  "2nd song #Shivanna avru ninna Tukkali #300subscriber ero youtube Channel li Bittidyala ninge yavdralli Hodibeku  😠😠 #Gimik_prem 🤖",
+  user: USER5
+};
+
+const TWEET7 = {
+  tweet: "“Having this easy-to-open packaging doesn’t just benefit us in the disabled community. It benefits everybody to have a package that opens a lot faster, with less hassle, so you can game faster.” #accessibility #inclusivedesign",
+  user: USER6
+};
+
+const USERS = [USER, USER1, USER2, USER3, USER4, USER5, USER6, USER7,];
+
+const TWEEETS = [TWEET, TWEET1, TWEET2, TWEET3, TWEET4, TWEET5, TWEET6, TWEET7];
+
 
 export {TWEEETS, USER, USERS};

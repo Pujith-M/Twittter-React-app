@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import Navbar from './components/Home/navbar'
 import Home from './components/Home/home'
-import {USER} from "./constants";
 
 class App extends Component {
 
   handleLogOut = () => {
+    localStorage.removeItem('user');
     this.setState({
       isUserLoggedIn: false,
     });
@@ -18,6 +18,7 @@ class App extends Component {
       userName: '#' + googleUserInfo.profileObj.name,
       tweeets: [],
     };
+    localStorage.setItem('user', JSON.stringify(user));
     this.setState({
       isUserLoggedIn: true,
       user: user
@@ -26,9 +27,16 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    let isUserLoggedIn = false;
+    let user = localStorage.user;
+    console.log(user);
+    if (user) {
+      isUserLoggedIn = true;
+      user = JSON.parse(user);
+    }
     this.state = {
-      isUserLoggedIn: false,
-      user: USER,
+      isUserLoggedIn: isUserLoggedIn,
+      user: user,
     };
   }
 
@@ -39,7 +47,7 @@ class App extends Component {
           isUserLoggedIn={this.state.isUserLoggedIn}
           handleLogOut={this.handleLogOut}
           handleLogIn={this.handleLogIn}
-          userName={this.state.user.name}
+          user={this.state.user}
         />
         <HomePage
           isUserLoggedIn={this.state.isUserLoggedIn}

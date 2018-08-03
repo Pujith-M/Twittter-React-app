@@ -42,7 +42,7 @@ class NavBarItems extends Component {
             }}
           />
           <NavBarItem
-            name={this.props.userName}
+            name={this.props.user.name}
             onClickHandler={() => {
             }}
           />
@@ -81,7 +81,7 @@ class Navbar extends Component {
               isUserLoggedIn={this.props.isUserLoggedIn}
               handleLogOut={this.props.handleLogOut}
               handleLogIn={this.props.handleLogIn}
-              userName={this.props.userName}
+              user={this.props.user}
             />
           </div>
         </nav>
